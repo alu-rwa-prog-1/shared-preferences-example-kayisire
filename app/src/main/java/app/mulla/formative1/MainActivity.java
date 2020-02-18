@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         sessions.add("Session 2");
         sessions.add("Session 3");
 
-        ArrayAdapter<String> adapterSession = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, sessions);
-        adapterSession.setDropDownViewResource(android.R.layout.activity_list_item);
+        ArrayAdapter<String> adapterSession = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sessions);
+        adapterSession.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         session.setAdapter(adapterSession);
 
         Spinner dept = findViewById(R.id.dept_spinner);
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         deptList.add("Department 2");
         deptList.add("Department 3");
 
-        ArrayAdapter<String> deptAdapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, deptList);
-        deptAdapter.setDropDownViewResource(android.R.layout.activity_list_item);
+        ArrayAdapter<String> deptAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, deptList);
+        deptAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         session.setAdapter(deptAdapter);
     }
 
